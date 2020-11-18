@@ -7,6 +7,6 @@ app.get('/', (req, res) => {
 });
 
 // SERVER LISTENING tjfjkhfksl
-app.listen(3000, () =>{
+app.listen(process.env.PORT ||3000, () =>{
     console.log(`server listening at port 3000`)
 });
