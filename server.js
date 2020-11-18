@@ -20,6 +20,11 @@ db.once('open', () => console.log("Connected to database"));
 
 app.use(express.json());
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 //USE USER MIDDLEWARE
 
 const userRoute = require('./routes/users');
